@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "taylanaksservice-d6f0"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "taylanaksservice-d6f0"
+  template:
+    metadata:
+      labels:
+        app: "taylanaksservice-d6f0"
+    spec:
+      containers:
+        - name: "taylanaksservice-d6f0"
+          image: "rgtaylan.azurecr.io/taylanaksservice"
+          ports:
+          - containerPort: 80
